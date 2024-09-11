@@ -1,0 +1,61 @@
+@startuml
+
+skinparam backgroundColor #EEEBDC
+skinparam classBackgroundColor PaleGreen
+skinparam classBorderColor Black
+skinparam classArrowColor SeaGreen
+skinparam classFontColor Black
+
+left to right direction
+
+package "界面" {
+    frame "搜索面板" {
+        rectangle "类别选择"
+        rectangle "文本搜索框"
+        rectangle "文本输入"
+    }
+    frame "素材列表" {
+        rectangle "公共素材 Item"
+    }
+}
+
+package "视图模型" {
+    frame "搜索上下文" {
+        rectangle "keyword"
+        rectangle "categories"
+        rectangle "order"
+        rectangle "assetsList"
+    }
+}
+
+package "控制器" {
+    rectangle "用户操作检查"
+    rectangle "应用状态控制器"
+    rectangle "页面状态控制器"
+    rectangle "网络状态控制器"
+}
+
+package "业务逻辑" {
+    frame "AI Service" {
+        rectangle "生成图片/音乐"
+    }
+    frame "Model" {
+        rectangle "请求处理"
+        rectangle "请求结果处理"
+        rectangle "请求结果缓存"
+        rectangle "错误和状态处理"
+    }
+}
+
+database "DB" {
+    frame "数据库存储"
+}
+
+"搜索面板" -- "搜索上下文"
+"素材列表" -- "搜索上下文"
+"搜索上下文" -- "控制器"
+"控制器" -- "AI Service"
+"AI Service" -- "Model"
+"Model" -- "DB"
+
+@enduml

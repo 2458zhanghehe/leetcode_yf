@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ch01-ssm-together:war">
+    <output-path>$PROJECT_DIR$/../ch01-ssm-together/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ch01-ssm-together</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ch01-ssm-together-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ch01-ssm-together:war exploded" />
+    </root>
+  </artifact>
+</component>

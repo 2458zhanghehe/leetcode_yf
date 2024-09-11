@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tryweb:war">
+    <output-path>$PROJECT_DIR$/../tryweb/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>tryweb</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="tryweb-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="tryweb:war exploded" />
+    </root>
+  </artifact>
+</component>

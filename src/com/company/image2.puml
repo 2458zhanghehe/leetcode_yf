@@ -1,0 +1,54 @@
+@startuml
+allowmixing
+
+skinparam namespace {
+    BackgroundColor White
+    BorderColor Black
+}
+
+namespace 视图 {
+    skinparam BackgroundColor LightBlue
+    rectangle "搜索模块\n- 关键字搜索\n- 文本输入\n- 搜索建议\n- 分类搜索\n- 帮助搜索" as 搜索模块
+    rectangle "资源列表\n- 资产列表 Item\n- AI 资产 Item\n- AI 资产 Editor" as 资源列表
+}
+
+namespace 搜索上下文 {
+    skinparam BackgroundColor LightYellow
+    rectangle "SearchContext\n- keyword\n- suggestions\n- categories\n- selectedCategories\n- order" as SearchContext
+    rectangle "assetsList" as assetsList
+    rectangle "aiAssetsList" as aiAssetsList
+}
+
+rectangle "selectedAsset" as selectedAsset
+
+搜索模块 -right-> SearchContext
+资源列表 -right-> SearchContext
+assetsList -down-> selectedAsset
+aiAssetsList -down-> selectedAsset
+
+namespace 控制器 {
+    skinparam BackgroundColor LightPurple
+    rectangle "GET /getList" as getList
+    rectangle "控制器\n- 用户搜索\n- 类别定制搜索\n- 用户定制搜索\n- 团队定制搜索\n- 机构定制搜索" as 控制器
+}
+
+SearchContext --> getList
+getList --> 控制器
+
+namespace AI服务 {
+    skinparam BackgroundColor LightGrey
+    rectangle "AI服务\n- 智能化服务\n- 算力租赁\n- 大数据处理" as AIServices
+}
+
+控制器 --> AIServices
+
+namespace 模型 {
+    skinparam BackgroundColor Wheat
+    rectangle "数据库\n- 实例模型\n- 模型更新数据\n- 算法模型\n- 存储模型更新" as 数据库
+    database "DB" as DB
+}
+
+AIServices --> 数据库
+数据库 --> DB
+
+@enduml

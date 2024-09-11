@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../ch01-hello-springmvc" />
+    <file type="web" url="file://$PROJECT_DIR$/../ch01-ssm-together" />
+    <file type="web" url="file://$PROJECT_DIR$/../ch02-hello-springmvc-requestMapping" />
+    <file type="web" url="file://$PROJECT_DIR$/../ch03-hello-springmvc-receiveparam" />
+    <file type="web" url="file://$PROJECT_DIR$/../ch04-hello-springmvc-return" />
+    <file type="web" url="file://$PROJECT_DIR$/../ch04-spring-web" />
+    <file type="web" url="file://$PROJECT_DIR$/../ch05-spring-web-sales" />
+    <file type="web" url="file://$PROJECT_DIR$/../ch08-forward-redirect" />
+    <file type="web" url="file://$PROJECT_DIR$/../ch09-exception-handler" />
+    <file type="web" url="file://$PROJECT_DIR$/../ch10-interceptor" />
+    <file type="web" url="file://$PROJECT_DIR$/../ch4_maven_web" />
+    <file type="web" url="file://$PROJECT_DIR$/../tryweb" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../sky-take-out/sky-common/pom.xml" />
+        <option value="$PROJECT_DIR$/../sky-take-out/sky-pojo/pom.xml" />
+        <option value="$PROJECT_DIR$/../sky-take-out/sky-server/pom.xml" />
+        <option value="$PROJECT_DIR$/../sky-take-out/sky-timeOutService/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectKey">
+    <option name="state" value="project://e2804f05-5315-4fc6-a121-c522a6c26470" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

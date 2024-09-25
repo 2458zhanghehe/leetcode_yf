@@ -1,4 +1,4 @@
-package com.company.Shousi.proxy.jdk;
+package com.company.Shousi.GoF23.proxy.jdk;
 
 import java.io.IOException;
 

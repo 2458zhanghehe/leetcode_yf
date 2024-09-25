@@ -1,4 +1,4 @@
-package com.company.Shousi.proxy.cgLib;
+package com.company.Shousi.GoF23.proxy.cgLib;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cglib.proxy.Enhancer;

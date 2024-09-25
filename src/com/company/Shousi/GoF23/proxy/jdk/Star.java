@@ -1,4 +1,4 @@
-package com.company.Shousi.proxy.jdk;
+package com.company.Shousi.GoF23.proxy.jdk;
 
 public interface Star {
     public abstract void sing(String musicName);

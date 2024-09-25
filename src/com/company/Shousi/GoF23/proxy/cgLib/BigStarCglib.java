@@ -1,19 +1,23 @@
-package com.company.Shousi.proxy.jdk;
+package com.company.Shousi.GoF23.proxy.cgLib;
 
-public class BigStarJdk implements Star {
+
+public class BigStarCglib {
 
     public String name;
+    public BigStarCglib(){
+        this.name = "默认胡汉三";
+    }
 
-    public BigStarJdk(String name){
+    public BigStarCglib(String name){
         this.name = name;
     }
 
-    @Override
-    public final void sing(String musicName){
+
+    public void sing(String musicName){
         System.out.println(this.name + "正在唱" + musicName);
     }
 
-    @Override
+
     public String dance(){
         System.out.println(this.name + "正在跳");
         return "太酷啦";

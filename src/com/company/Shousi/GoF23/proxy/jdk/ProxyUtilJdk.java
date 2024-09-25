@@ -1,4 +1,4 @@
-package com.company.Shousi.proxy.jdk;
+package com.company.Shousi.GoF23.proxy.jdk;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

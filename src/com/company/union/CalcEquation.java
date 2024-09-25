@@ -3,7 +3,7 @@ package com.company.union;
 import java.util.HashMap;
 import java.util.List;
 
-//leetcode 399  重要 官方题解
+//leetcode 399  重要 官方题解  除法求值
 public class CalcEquation {
     public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
 

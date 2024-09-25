@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 
-//leetcode149
+//leetcode 149
 public class MaxPoints {
     public int maxPoints(int[][] points) {
         Arrays.sort(points, new Comparator<int[]>() {

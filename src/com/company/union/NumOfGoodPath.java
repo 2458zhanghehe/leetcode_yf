@@ -4,7 +4,7 @@ import org.omg.CORBA.INTERNAL;
 
 import java.util.Arrays;
 
-//leetcode 2421
+//leetcode 2421 好路径的数目
 public class NumOfGoodPath {
 
     private int[] father = new int[30001];

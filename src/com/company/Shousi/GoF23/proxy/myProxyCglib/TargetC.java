@@ -1,4 +1,4 @@
-package com.company.Shousi.proxy.myProxyCglib;
+package com.company.Shousi.GoF23.proxy.myProxyCglib;
 
 public class TargetC {
 

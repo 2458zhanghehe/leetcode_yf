@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-//leetcode 2092
+//leetcode 2092 找出知晓所有密码的专家
 public class FindAllPeople {
     private static int[] father = new int[100000];
 

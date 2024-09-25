@@ -1,4 +1,4 @@
-package com.company.Shousi.proxy.myProxyJdk;
+package com.company.Shousi.GoF23.proxy.myProxyJdk;
 
 
 public class Target implements FooAndBar{

@@ -1,5 +1,6 @@
 package com.company.Tanxin;
 
+//leetcode 45 跳跃游戏Ⅱ
 public class JumpGame {
     public static int jumpGame(int[] arr) {
         if (arr == null || arr.length < 2) {

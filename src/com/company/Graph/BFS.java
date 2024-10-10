@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BFS {
+
+    //无向图，从点node进行宽度遍历。  如果图有多个子图，要求全遍历，则需要对每个node进行一次bfs
     public static void bfs(Node node) {
         if (node == null) {
             return;

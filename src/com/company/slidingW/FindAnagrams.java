@@ -31,7 +31,7 @@ public class FindAnagrams {
             if(debat == 0){
                 ans.add(l);
                 cnt_P[s.charAt(l++) - 'a']++;
-                debat = 1;
+                debat = 1;  
             }
         }
         return ans;

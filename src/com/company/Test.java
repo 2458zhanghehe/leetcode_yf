@@ -8,7 +8,9 @@ import java.util.concurrent.Executors;
 public class Test {
     private String str = "das";
     public static void main(String[] args) throws Exception {
-        Integer a = 10000001;
-        System.out.println(a == 10000001);
+        StringBuilder sb = new StringBuilder();
+        sb.append(123);
+        sb.append(2);
+        System.out.println(sb.toString());
     }
 }

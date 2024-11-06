@@ -1,6 +1,6 @@
 package com.company.Dp;
 
-//leetcode70
+//leetcode 70 爬楼梯
 public class ClimbStairs {
     public static int climbStairs(int n) {
         return process(n,0);
@@ -13,16 +13,17 @@ public class ClimbStairs {
     }
 
     public static int climbStairs2(int n){
-        int[] dp = new int[n + 2];
-        //这里n + 2是因为题目虽然给的n层楼梯，但起始位置0没有算上，所以其实题目空间为n + 1
-        dp[n] = 1;
-        dp[n+1] = 0;
-        for(int i = n - 1; i >= 0; i--){
-            dp[i] = dp[i + 1] + dp[i + 2];
+        if(n <= 2){
+            return n;
         }
-        return dp[0];
+        int[] dp = new int[n + 1];
+        dp[1] = 1;
+        dp[2] = 2;
+        for(int i = 3; i < n + 1; i++){
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
+        return dp[n];
     }
-
     public static void main(String[] args) {
         climbStairs(10);
     }

@@ -1,8 +1,7 @@
 package com.company.Dp;
 
-import com.sun.java.swing.plaf.windows.WindowsDesktopIconUI;
 
-//leetcode322  最少需要多少个硬币
+//leetcode322  零钱兑换 最少需要多少个硬币
 public class CoinChange {
     public static int coinChange(int[] coins, int amount) {
         return process(coins,0,amount);
@@ -20,7 +19,7 @@ public class CoinChange {
         }
 
         int ans = Integer.MAX_VALUE;
-        for(int i = 0; i < rest/coins[index] + 1; i++){
+        for(int i = 0; i <= rest/coins[index]; i++){
             int ansI = process(coins, index + 1, rest - i * coins[index]);
             if(ansI != -1){
                 ans = Math.min(ans,ansI + i);
@@ -42,16 +41,13 @@ public class CoinChange {
         for(int i = len - 1; i >= 0; i--){
             for(int j = 1; j < amount + 1; j++){
                 dp[i][j] = Integer.MAX_VALUE;
-                boolean flag = true;
+
                 for(int k = 0; k < j/coins[i] + 1; k++){
                     if(dp[i + 1][j - k*coins[i]] != -1){
-                        flag = false;
                         dp[i][j] = Math.min(dp[i][j], dp[i + 1][j - k * coins[i]] + k);
                     }
                 }
-                if(flag){
-                    dp[i][j] = -1;
-                }
+                dp[i][j] = dp[i][j] == Integer.MAX_VALUE ? -1 : dp[i][j];
             }
         }
         return dp[0][amount];

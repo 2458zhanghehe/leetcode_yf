@@ -1,7 +1,7 @@
-package com.company.GreatFactoryProblem;
+package com.company.array;
 
 
-//leetcode 42
+//leetcode 42 接雨水
 public class TrappingRainWater {
     public static int trap(int[] height) {
         if(height == null || height.length <= 2){

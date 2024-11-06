@@ -1,5 +1,10 @@
 package com.company.Dp;
 
+//lcy s1至少要删掉多少个字符才能变成s2的子串
+// dp[i][j]，s1的前i个字符(0...i - 1)至少要删除多少个字符才能变成s2的前j个字符(0...j - 1)的子串
+// s1[i - 1] == s2[j - 1]，则dp[i][j] = dp[i - 1][j - 1]
+// s1[i - 1] != s2[j - 1], 则dp[i][j] = dp[i - 1][j] + 1;
+// 返回m行的最小值即为答案
 public class DeleteChar {
     public int DeleteNums(String s1, String s2){
         int m = s1.length();

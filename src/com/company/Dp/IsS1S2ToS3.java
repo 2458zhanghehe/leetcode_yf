@@ -2,6 +2,10 @@ package com.company.Dp;
 
 //LCR 096  leetcode97 交错字符串
 public class IsS1S2ToS3 {
+    //dp[i][j]：s1的前i个字符(0...i - 1)和s2的前j个字符(0...j - 1)能否构成s3的前i + j个字符(0...i + j - 1)
+    //(1) s3[i + j - 1] == s1[i - 1]，则 dp[i][j] = dp[i - 1][j];
+    //(2) s3[i + j - 1] == s2[j - 1], 则dp[i][j] = dp[i][j - 1]；
+    //否则，dp[i][j] = false;
     public boolean is_S1_S2ToS3(String s1, String s2, String s3){
         int m = s1.length();
         int n = s2.length();

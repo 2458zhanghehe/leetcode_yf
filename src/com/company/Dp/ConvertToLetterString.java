@@ -2,7 +2,7 @@ package com.company.Dp;
 
 public class ConvertToLetterString {
 
-    //数字串以字符串的形式给出  leetcode91
+    //数字串以字符串的形式给出  leetcode 91  解码方法
     public static int convertToLetterString1(String s) {
         char[] s_char = s.toCharArray();
         return process1(s_char, 0);
@@ -47,7 +47,7 @@ public class ConvertToLetterString {
 
 
     public static void main(String[] args) {
-        System.out.println(convertToLetterString1("111111"));
+        System.out.println(convertToLetterString1("106"));
         System.out.println(convertToLetterString3("111111"));
 
     }

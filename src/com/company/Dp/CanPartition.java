@@ -38,13 +38,12 @@ public class CanPartition {
 
         boolean[][] dp = new boolean[nums.length + 1][aim + 1];
 
-        for (int j = 0; j < aim + 1; j++) {
-            dp[nums.length][j] = j == aim ? true : false;
-        }
+
+        dp[nums.length][aim] = true;
 
         for (int i = nums.length - 1; i >= 0; i--) {
             for (int j = 0; j < aim + 1; j++) {
-                dp[i][j] = dp[i + 1][j] || (j + nums[i] < aim + 1 ? dp[i + 1][j + nums[i]] : false);
+                dp[i][j] = dp[i + 1][j] || (j + nums[i] < aim + 1 && dp[i + 1][j + nums[i]]);
             }
         }
         return dp[0][0];

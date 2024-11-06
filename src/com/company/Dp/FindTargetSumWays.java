@@ -15,9 +15,9 @@ public class FindTargetSumWays {
         return ans1 + ans2;
     }
 
-    public static int findTargetSumWays1(int[] nums, int target){
+    public static int findTargetSumWays1(int[] nums, int target) {
         int sum = 0;
-        for(int num : nums){
+        for (int num : nums) {
             sum += num;
         }
         // 构成正target和负target的方法数是相同的，这里全部搞成正数

@@ -1,7 +1,7 @@
 package com.company.Dp;
 
+// leetcode 518 零钱兑换Ⅱ 零钱兑换问题方法数 arr中没有重复数，但arr[i]可以重复使用
 public class CoinWays {
-    //零钱兑换问题方法数 arr中没有重复数，但arr[i]可以重复使用
     public static int coinWays1(int[] arr, int target) {
         return process1(arr, 0, target);
     }
@@ -27,8 +27,8 @@ public class CoinWays {
         }
         for (int i = arr.length - 1; i >= 0; i--) {
             for (int j = 1; j < dp[0].length; j++) {
-                for (int k = 0; k < j / arr[i] + 2; k++) {
-                    dp[i][j] += (j - arr[i] * k) < 0 ? 0 : dp[i + 1][j - arr[i] * k];
+                for (int k = 0; k < j / arr[i] + 1; k++) {
+                    dp[i][j] += dp[i + 1][j - arr[i] * k];
                 }
             }
         }

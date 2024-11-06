@@ -7,8 +7,14 @@ public class EditDistance {
         return ans;
     }
 
+    //dp[i][j]表示将word1的前i个字符(0...i - 1)转为word2的前j个字符(0...j - 1)的最小代价
+    //(1) word1[i - 1]参与，
+    // 1° word1[i - 1]变为word2[j - 1]，则 word1[i - 1] == word2[j - 1] ? dp[i - 1][j - 1] : (dp[i - 1][j - 1] + c)不等于则替换
+    // 2° word1[i - 1]变为word2[j - 1]之前的字符，则dp[i][j - 1] + a，插入一个
+    //(2) word1[i - 1]不参与， 则dp[i - 1][j] + b，删除一个
+
     private static int editDistance(String word1, String word2, int a, int b, int c) {
-        c = Math.min(c,a + b);
+        c = Math.min(c, a + b);
         char[] w1Chars = word1.toCharArray();
         char[] w2Chars = word2.toCharArray();
         int m = w1Chars.length;

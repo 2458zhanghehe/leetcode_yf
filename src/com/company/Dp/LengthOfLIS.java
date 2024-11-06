@@ -25,13 +25,6 @@ public class LengthOfLIS {
         return Math.max(ans1, ans2);
     }
 
-//    public static int lengthOfLIS2(int[] nums){
-//        int[][] dp = new int[nums.length + 1][nums.length + 1];
-//        for(int i = 0; i < dp[0].length; i++){
-//            dp[nums.length][i] = i;
-//        }
-//        int preMax = Integer.MIN_VALUE;
-//    }
 
 
     //dp[i]表示以nums[i]结尾的最长递增子序列 Krahets题解

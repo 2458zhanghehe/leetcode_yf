@@ -1,7 +1,6 @@
 package com.company.Dp;
-
+//leetcode 32 最长有效括号
 public class LongestValidParentheses {
-    //leetcode32
     public static int longestValidParentheses1(String s) {
         int count = 0;
         int ans = 0;
@@ -45,6 +44,7 @@ public class LongestValidParentheses {
         return ans;
     }
 
+    //dp[i]表示以i结尾的有效括号长度
     public static int longestValidParentheses2(String s) {
         int[] dp = new int[s.length()];
         int ans = 0;
